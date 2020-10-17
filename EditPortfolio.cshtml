@@ -1,0 +1,308 @@
+﻿@model UserDto
+@using PortfolioProject.Data
+@{
+    Layout = "~/Views/Shared/_portfolioLayout.cshtml";
+
+}
+<div style=" background: -webkit-linear-gradient(-135deg, #18d26e, #fcfcfc,#18d26e); ">
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Build your Portfolio</h2>
+            <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data" action="/API/UserAPI/EditPortfolio">
+                <h3>
+                    Personal Info
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+
+                        <div class="form-input">
+                            @Html.TextBoxFor(x=>x.FirstName)
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x=>x.SecondName)
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.LastName)
+                        </div>
+
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.JobTitle)
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="PersonalImage" id="PersonalImage" value="PersonalImage" />
+                        </div>
+                        <div class="form-input">
+                            <input name="DateofBirth" class="form-control Birthday_date form-class" type="text" placeholder="Birthday" id="Birthdaydate_datepicker" />
+                        </div>
+                    </div>
+
+                </fieldset>
+
+                <h3>
+                    About
+                </h3>
+                <fieldset>
+
+                    <div class="form-input">
+                        @Html.TextBoxFor(x => x.About)
+                    </div>
+                    <div class="form-input">
+                        @Html.TextBoxFor(x => x.Vision)
+                    </div>
+                    <div class="form-input">
+                        <input type="file" name="CV" id="CV" placeholder="CV" />
+                    </div>
+
+                </fieldset>
+
+                <h3>
+                    Educational
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+                        <div class="form-input col-md-3">
+                            <span>First Education</span>
+                            <select name="UniversityDto[0].UniversityId" id="UniversityDto[0].UniversityId" required>
+                                <option value="">University</option>
+                                @{
+                                    foreach (var uni in (List<University>)ViewBag.Universities)
+                                    {
+                                       
+                                     <option selected value="@uni.UniversityId">@uni.UniversityName</option>
+                                       
+                                    }
+
+                                }
+
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+
+                        <div class="form-input col-md-3">
+                            <span>Secound Education</span>
+                            <select name="UniversityDto[1].UniversityId" id="UniversityDto[1].UniversityId">
+                                <option value="">University</option>
+                                @{
+                                    foreach (var uni in (List<University>)ViewBag.Universities)
+                                    {
+                                        
+                                        <option  value="@uni.UniversityId">@uni.UniversityName</option>
+                                   
+                                    }
+
+                                }
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+                        <div class="form-input col-md-3">
+                            <span>Third Education</span>
+                            <select name="UniversityDto[2].UniversityId" id="UniversityDto[2].UniversityId">
+                                <option value="">University</option>
+                                @{
+                                    foreach (var uni in (List<University>)ViewBag.Universities)
+                                    {
+                                         <option  value="@uni.UniversityId">@uni.UniversityName</option>
+                                           
+                                    }
+
+                                }
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-row form-input-flex" >
+                        <div class="form-input col-md-3">
+                            <select name="UniversityDto[0].DegreeId" id="UniversityDto[0].DegreeId" required>
+                                <option value="">Degree</option>
+                                @{
+                                    foreach (var degree in (List<Degree>)ViewBag.Degree)
+
+                                    { 
+                                        <option value="@degree.DegreeId">@degree.DegreeName</option>
+                                    }
+                                }
+                                }
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+                        <div class="form-input col-md-3">
+                            <select name="UniversityDto[1].DegreeId" id="UniversityDto[1].DegreeId">
+                                <option value="">Degree</option>
+                                @{
+                                    foreach (var degree in (List<Degree>)ViewBag.Degree)
+
+                                    { 
+                                                <option value="@degree.DegreeId">@degree.DegreeName</option>
+                                    }
+                                            
+                                }
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+                        <div class="form-input col-md-3">
+                            <select name="UniversityDto[2].DegreeId" id="UniversityDto[2].DegreeId">
+                                <option value="">Degree</option>
+                                @{
+                                    foreach (var degree in (List<Degree>)ViewBag.Degree)
+
+                                        
+                                            {
+                                                <option  value="@degree.DegreeId">@degree.DegreeName</option>
+                                            }
+                                            
+                                }
+                            </select>
+                            <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                        </div>
+                    </div>
+                    <div class="form-row form-input-flex">
+                        <div class="form-input col-md-3">
+                            @Html.TextBoxFor(x => x.UniversityDto[0].MajorName , new { @required = "required" } )
+                        </div>
+                        <div class="form-input col-md-3">
+                            @Html.TextBoxFor(x => x.UniversityDto[1].MajorName)
+                        </div>
+                        <div class="form-input col-md-3">
+                            @Html.TextBoxFor(x => x.UniversityDto[2].MajorName)
+                        </div>
+                    </div>
+                </fieldset>
+                <h3>
+                    Skill
+                </h3>
+                <fieldset>
+                    <div class="form-input col-md-3">
+                        <select name="InterpersonalSkill" id="InterpersonalSkill" class="selectpicker" multiple data-live-search="true">
+                            <option value="">Interpersonal Skill</option>
+                            @{
+                                foreach (var personalskill in (List<InterpersonalSkill>)ViewBag.interpersonalSkills)
+                                {
+                                    foreach (var x in Model.InterpersonalSkill)
+                                    {
+                                        if (personalskill.InterpersonalSkillId == x)
+                                        {
+                                            <option selected value="@personalskill.InterpersonalSkillId">@personalskill.InterpersonalSkillName</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@personalskill.InterpersonalSkillId">@personalskill.InterpersonalSkillName</option>
+                                        }
+                                    }
+                                }
+
+                            }
+                        </select>
+                        <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                    </div>
+                    <div class="form-input col-md-3">
+                        <select name="TechnicalSkill" id="TechnicalSkill" class="selectpicker" multiple data-live-search="true">
+                            <option value="">Technical Skill</option>
+                            @{
+                                foreach (var technicalSkill in (List<TechnicalSkill>)ViewBag.TechnicalSkills)
+                                {
+                                    foreach (var x in Model.TechnicalSkill)
+                                    {
+                                        if (technicalSkill.TechnicalSkillId == x)
+                                        {
+                                            <option selected value="@technicalSkill.TechnicalSkillId">@technicalSkill.TechnicalSkillName</option>
+                                        }
+                                        else
+                                        {
+                                            <option value="@technicalSkill.TechnicalSkillId">@technicalSkill.TechnicalSkillName</option>
+                                        }
+                                    }
+                                }
+                            }
+                        </select>
+                        <span class="select-icon"><i class="zmdi zmdi-caret-down"></i></span>
+                    </div>
+                </fieldset>
+                <h3>
+                    Project
+                </h3>
+                <fieldset style="margin-top:300px">
+                    
+                    <div class="form-row form-input-flex" style="margin-top:-300px">
+                        <div class="form-input">
+                            <span>First Project</span>
+                            @Html.TextBoxFor(x => x.ProjectDto[0].ProjectName , new { @required = "required" })
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.ProjectDto[0].ProjectDescription , new { @required = "required" })
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="ProjectDto[0].ProjectImage" id="ProjectDto[0].ProjectImage" placeholder="Project Image" required />
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="ProjectDto[0].ProjectPDF" id="ProjectDto[0].ProjectPDF" placeholder="Project PDF" required />
+                        </div>
+                    </div>
+                    <span>Secound Project</span>
+
+                    <div class="form-row form-input-flex">
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.ProjectDto[1].ProjectName)
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.ProjectDto[1].ProjectDescription)
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="ProjectDto[1].ProjectImage" id="ProjectDto[1].ProjectImage" placeholder="Project Image" />
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="ProjectDto[1].ProjectPDF" id="ProjectDto[1].ProjectPDF" placeholder="Project PDF" />
+                        </div>
+                    </div>
+                    <span>Third Project</span>
+
+                    <div class="form-row form-input-flex">
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.ProjectDto[2].ProjectName)
+
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.ProjectDto[2].ProjectDescription)
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="ProjectDto[2].ProjectImage" id="ProjectDto[0].ProjectImage" placeholder="Project Image" />
+                        </div>
+                        <div class="form-input">
+                            <input type="file" name="ProjectDto[2].ProjectPDF" id="ProjectDto[0].ProjectPDF" placeholder="Project PDF" />
+                        </div>
+                    </div>
+
+                </fieldset>
+                <h3>
+                    Contact
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.PortfolioEmail)
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.MobileNumber)
+                        </div>
+                        <div class="form-input">
+                            @Html.TextBoxFor(x => x.Address)
+                        </div>
+
+                        <div class="form-input">
+                            <input type="url" name="TwitterURL" id="TwitterURL" placeholder="Twitter URL" />
+                        </div>
+                        <div class="form-input">
+                            <input name="FacebookURL" type="url" placeholder="Facebook URL" id="FacebookURL" />
+                        </div>
+                        <div class="form-input">
+                            <input type="url" name="LinkedInURL" id="LinkedInURL" placeholder="LinkedIn URL" />
+                        </div>
+                    </div>
+                </fieldset>
+
+            </form>
+        </div>
+
+    </div>
+</div>
