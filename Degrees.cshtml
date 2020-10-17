@@ -1,0 +1,60 @@
+﻿@model Degree
+@using PortfolioProject.Data
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<section id="about">
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="container">
+                <table class="table table-striped ">
+                    <thead>
+                        <tr>
+                            <th>Degree Name</th>
+                            <th>Remove</th>
+                            <th>Edit</th>
+                            <th>
+                                @Html.ActionLink("Create", "DegreeCreate", "Degree",
+                                new { @class = "btn btn-dark" })
+                            </th>
+
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @{
+                            foreach (var x in (List<Degree>)ViewBag.Degrees)
+                            {
+                                <tr>
+                                    <td>@x.DegreeName</td>
+                                    <td>
+                                        @Html.ActionLink("Remove", "RemoveDegree", "Degree",
+                                       new { Id = x.DegreeId }, new { @style = "background:#18d26e ", @class = "btn text-white " })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "EditDegree", "Degree",
+                                       new { DegreeId = x.DegreeId }, new { @style = "background:#18d26e ", @class = "btn text-white " })
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+        </header>
+
+    </div>
+</section>

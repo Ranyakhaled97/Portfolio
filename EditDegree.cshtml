@@ -1,0 +1,36 @@
+﻿@using PortfolioProject.Data
+@model Degree
+
+@{
+    Layout = "~/Views/Shared/_AdminActionLayout.cshtml";
+
+}
+<div style=" background: -webkit-linear-gradient(-135deg, #18d26e, #fcfcfc,#18d26e); ">
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Edit New Degree</h2>
+            <form id="signup-form" class="signup-form" action="/Degree/EditDegree" method="post">
+                <h3>
+                    Degree
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+
+
+                        @Html.HiddenFor(x=>x.DegreeId)
+                        <div class="form-input">
+                            <label>Add New Degree Name </label>
+                            @Html.TextBoxFor(x=>x.DegreeName)
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>

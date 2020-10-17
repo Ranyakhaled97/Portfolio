@@ -1,0 +1,36 @@
+﻿@using PortfolioProject.Data
+@model Degree
+
+@{
+    Layout = "~/Views/Shared/_AdminActionLayout.cshtml";
+
+}
+<div style=" background: -webkit-linear-gradient(-135deg, #18d26e, #fcfcfc,#18d26e); ">
+
+    <div class="main">
+
+        <div class="container">
+            <h2> Add New Degree</h2>
+            <form id="signup-form" class="signup-form" action="/Degree/CreateDegree">
+                <h3>
+                    Degree
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+
+
+
+                        <div class="form-input">
+                            <label>Enter Degree Name </label>
+                            <input type="text" name="DegreeName" id="DegreeName" />
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
