@@ -1,0 +1,134 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-PortfolioProject-D3CA251C-8400-498C-9720-A626D22B0993</UserSecretsId>
+    <CopyRefAssembliesToPublishDirectory>false</CopyRefAssembliesToPublishDirectory>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20201015115923_portfolio.cs" />
+    <Compile Remove="Data\Migrations\20201015115923_portfolio.Designer.cs" />
+    <Compile Remove="Data\Migrations\20201015141054_Portfolioproject.cs" />
+    <Compile Remove="Data\Migrations\20201015141054_Portfolioproject.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\.sass-cache\0ab8abc0fed2841fc21e545dead228d38843c7ea\main.scssc" />
+    <None Include="wwwroot\.sass-cache\0ab8abc0fed2841fc21e545dead228d38843c7ea\responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\11c5c9630c8fb379c36d1e3d5cedae3242345ede\style.scssc" />
+    <None Include="wwwroot\.sass-cache\21880c0ffe15753a53f8402e9f64e1077e071510\style.scssc" />
+    <None Include="wwwroot\.sass-cache\2af427b2894d1e78c5806e231aa35d00838a84e0\style.scssc" />
+    <None Include="wwwroot\.sass-cache\3826efd3d5832f13b2387c34dc4352f19ce0f650\style.scssc" />
+    <None Include="wwwroot\.sass-cache\3a8fa2a6e77ec7142978a883fd249dc4404b1860\extend.scssc" />
+    <None Include="wwwroot\.sass-cache\3a8fa2a6e77ec7142978a883fd249dc4404b1860\fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\3a8fa2a6e77ec7142978a883fd249dc4404b1860\global.scssc" />
+    <None Include="wwwroot\.sass-cache\3a8fa2a6e77ec7142978a883fd249dc4404b1860\minxi.scssc" />
+    <None Include="wwwroot\.sass-cache\3a8fa2a6e77ec7142978a883fd249dc4404b1860\variables.scssc" />
+    <None Include="wwwroot\.sass-cache\52172103e4920685e9c8bc3a27ff8b5a118aea7f\extend.scssc" />
+    <None Include="wwwroot\.sass-cache\52172103e4920685e9c8bc3a27ff8b5a118aea7f\fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\52172103e4920685e9c8bc3a27ff8b5a118aea7f\global.scssc" />
+    <None Include="wwwroot\.sass-cache\52172103e4920685e9c8bc3a27ff8b5a118aea7f\minxi.scssc" />
+    <None Include="wwwroot\.sass-cache\52172103e4920685e9c8bc3a27ff8b5a118aea7f\variables.scssc" />
+    <None Include="wwwroot\.sass-cache\5947b2fd6fea889b366315e45d8aae9649d4a553\style.scssc" />
+    <None Include="wwwroot\.sass-cache\632f5d1dd893d2e8764de51b8ca4120e25043113\extend.scssc" />
+    <None Include="wwwroot\.sass-cache\632f5d1dd893d2e8764de51b8ca4120e25043113\fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\632f5d1dd893d2e8764de51b8ca4120e25043113\global.scssc" />
+    <None Include="wwwroot\.sass-cache\632f5d1dd893d2e8764de51b8ca4120e25043113\minxi.scssc" />
+    <None Include="wwwroot\.sass-cache\632f5d1dd893d2e8764de51b8ca4120e25043113\variables.scssc" />
+    <None Include="wwwroot\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\main.scssc" />
+    <None Include="wwwroot\.sass-cache\643489b018602f15119d8f44aeb7fc79468873a9\responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\extend.scssc" />
+    <None Include="wwwroot\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\global.scssc" />
+    <None Include="wwwroot\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\minxi.scssc" />
+    <None Include="wwwroot\.sass-cache\7643c8aa2e335ff5e104bc47d8dd7f1a0693bb39\variables.scssc" />
+    <None Include="wwwroot\.sass-cache\8bd6255781d4496c2a92589f8676e579942555b8\style.scssc" />
+    <None Include="wwwroot\.sass-cache\9618751b08223fcf3aa454f875563042fa3f61bc\extend.scssc" />
+    <None Include="wwwroot\.sass-cache\9618751b08223fcf3aa454f875563042fa3f61bc\fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\9618751b08223fcf3aa454f875563042fa3f61bc\global.scssc" />
+    <None Include="wwwroot\.sass-cache\9618751b08223fcf3aa454f875563042fa3f61bc\minxi.scssc" />
+    <None Include="wwwroot\.sass-cache\9618751b08223fcf3aa454f875563042fa3f61bc\variables.scssc" />
+    <None Include="wwwroot\.sass-cache\a5fa5fcff3be0231dcf2135f3b4d08fac10773e6\main.scssc" />
+    <None Include="wwwroot\.sass-cache\a5fa5fcff3be0231dcf2135f3b4d08fac10773e6\responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\b5ec1c582439724031316ff1eb0959cf1f72e565\main.scssc" />
+    <None Include="wwwroot\.sass-cache\b5ec1c582439724031316ff1eb0959cf1f72e565\responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\cd5bb7a087549e7c3bea6e59da88a083c6191299\main.scssc" />
+    <None Include="wwwroot\.sass-cache\cd5bb7a087549e7c3bea6e59da88a083c6191299\responsive.scssc" />
+    <None Include="wwwroot\.sass-cache\e36cc9f3e18cb256035710746e3bec994a69527d\extend.scssc" />
+    <None Include="wwwroot\.sass-cache\e36cc9f3e18cb256035710746e3bec994a69527d\fonts.scssc" />
+    <None Include="wwwroot\.sass-cache\e36cc9f3e18cb256035710746e3bec994a69527d\global.scssc" />
+    <None Include="wwwroot\.sass-cache\e36cc9f3e18cb256035710746e3bec994a69527d\minxi.scssc" />
+    <None Include="wwwroot\.sass-cache\e36cc9f3e18cb256035710746e3bec994a69527d\variables.scssc" />
+    <None Include="wwwroot\.sass-cache\f49285f1317a1cafa93ab4f5de346f92bbc40d58\main.scssc" />
+    <None Include="wwwroot\.sass-cache\f49285f1317a1cafa93ab4f5de346f92bbc40d58\responsive.scssc" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\animated.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\core.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\icons.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\larger.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\list.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\path.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\less\variables.less" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <None Include="wwwroot\loginDesign\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <None Include="wwwroot\loginDesign\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.svg" />
+    <None Include="wwwroot\loginDesign\fonts\Linearicons-Free-v1.0.0\WebFont\Linearicons-Free.woff2" />
+    <None Include="wwwroot\loginDesign\js\main.js" />
+    <None Include="wwwroot\loginDesign\vendor\animsition\js\animsition.js" />
+    <None Include="wwwroot\loginDesign\vendor\animsition\js\animsition.min.js" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\css\bootstrap.css.map" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\js\bootstrap.js" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\js\bootstrap.min.js" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\js\popper.js" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\js\popper.min.js" />
+    <None Include="wwwroot\loginDesign\vendor\bootstrap\js\tooltip.js" />
+    <None Include="wwwroot\loginDesign\vendor\countdowntime\countdowntime.js" />
+    <None Include="wwwroot\loginDesign\vendor\daterangepicker\daterangepicker.js" />
+    <None Include="wwwroot\loginDesign\vendor\daterangepicker\moment.js" />
+    <None Include="wwwroot\loginDesign\vendor\daterangepicker\moment.min.js" />
+    <None Include="wwwroot\loginDesign\vendor\jquery\jquery-3.2.1.min.js" />
+    <None Include="wwwroot\loginDesign\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <None Include="wwwroot\loginDesign\vendor\select2\select2.js" />
+    <None Include="wwwroot\loginDesign\vendor\select2\select2.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNet.Security.OpenIdConnect.Primitives" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.8" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+</Project>
