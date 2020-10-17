@@ -1,965 +1,205 @@
-﻿[17:28] Thabet.Ajweh
+﻿ <!-- ======= Intro Section ======= -->
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<main>
+<section id="intro">
+    <div class="intro-container">
+        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+            <ol class="carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <div class="carousel-item active">
+                    <img src="~/assets/img/intro-carousel/1.jpg" style="height:100%; width:100%;"  />
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Description</h2>
+                            <p class="animate__animated animate__fadeInUp">A personal portfolio is a collection of educational, information, projects, skills, and documentation that relates specifically to an understanding of a user's individual vision needs.</p>
+                            <a href="/API/UserAPI/CreatePortfolio" class="btn-get-started scrollto animate__animated animate__fadeInUp">Build your Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="~/assets/img/intro-carousel/2.jpg" style="height:100%; width:100%;" />
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="~/animate__animated animate__fadeInDown">Description</h2>
+                            <p class="~/animate__animated animate__fadeInUp">You can easily view samples of your work, details about yourself, projects completed in the past, and explain to those who are better off why they should use your services for their benefits.</p>
+                            <a href="/API/UserAPI/CreatePortfolio" class="btn-get-started scrollto animate__animated animate__fadeInUp">Build your Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="~/assets/img/intro-carousel/3.jpg" style="height:100%; width:100%;" />
+                    <div class="carousel-container">
+                        <div class="container">
+                            <h2 class="animate__animated animate__fadeInDown">Description</h2>
+                            <p class="animate__animated animate__fadeInUp">Portfolio entries can be based on activities from the university to adult life. On this site you can create your personal portfolio.</p>
+                            <a href="/API/UserAPI/CreatePortfolio" class="btn-get-started scrollto animate__animated animate__fadeInUp">Build your Portfolio</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+
+            <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+
+        </div>
+    </div>
+</section><!-- End Intro Section -->
+<!-- ======= About Us Section ======= -->
+<section id="about">
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <h3>About WebSite</h3>
+        </header>
+        <div class="row about-cols">
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="~/assets/img/about-1.png" alt="Mission" class="img-fluid" style="padding-top: 10px; width: 100%; height: 100%;">
+                        <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                    </div>
+                    <h2 class="title"><a href="#">Our Mission</a></h2>
+                    <h5 style="color: black; text-align: center; padding-bottom: 20px;">
+                        Create Your personal Portfolio Easily, Quickly And With High Quality.
+                    </h5>
+                </div>
+            </div>
+
+
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="about-col">
+                    <div class="img">
+                        <img src="~/assets/img/about-vision.jpg" alt="Vision" class="img-fluid" style="width: 100%; height: 300px;">
+                        <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                    </div>
+                    <h2 class="title"><a href="#">Our Vision</a></h2>
+                    <h5 style="color: black; text-align: center; padding-bottom: 45px;">
+                        Your Best Clude Personal Portfolio.
+                    </h5>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section><!-- End About Us Section -->
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="section-bg">
+    <div class="container" data-aos="fade-up">
 
+        <header class="section-header">
+            <h3 class="section-title">Portfolio Example</h3>
+        </header>
 
-using System;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Portfolio.Data;
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class=" col-lg-12">
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                </ul>
+            </div>
+        </div>
 
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-namespace Portfolio.Data.Migrations
-{
-    [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
-    {
-        protected override void BuildModel(ModelBuilder modelBuilder)
-        {
-#pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.7")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <figure>
+                        <img src="~/assets/img/portfolio/app1.jpg" class="img-fluid" alt="">
+                        <a href="~/assets/img/portfolio/app1.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 2"><i class="ion ion-eye"></i></a>
+                    </figure>
 
+                    <div class="portfolio-info">
+                        <h4><a href="portfolio-details.html"></a>Example 1</h4>
 
-            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
-                {
-                    b.Property<string>
-    ("Id")
-    .HasColumnType("nvarchar(450)");
+                    </div>
+                </div>
+            </div>
 
 
-    b.Property<string>
-        ("ConcurrencyStamp")
-        .IsConcurrencyToken()
-        .HasColumnType("nvarchar(max)");
 
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <figure>
+                        <img src="~/assets/img/portfolio/app2.jpg" class="img-fluid" alt="">
+                        <a href="~/assets/img/portfolio/app2.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 2"><i class="ion ion-eye"></i></a>
+                    </figure>
 
-        b.Property<string>
-            ("Name")
-            .HasColumnType("nvarchar(256)")
-            .HasMaxLength(256);
+                    <div class="portfolio-info">
+                        <h4><a href="portfolio-details.html">Example 2</a></h4>
 
+                    </div>
+                </div>
+            </div>
 
-            b.Property<string>
-                ("NormalizedName")
-                .HasColumnType("nvarchar(256)")
-                .HasMaxLength(256);
 
+            <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                <div class="portfolio-wrap">
+                    <figure>
+                        <img src="~/assets/img/portfolio/app3.jpg" class="img-fluid" alt="">
+                        <a href="~/assets/img/portfolio/app3.jpg" class="link-preview venobox" data-gall="portfolioGallery" title="App 3"><i class="ion ion-eye"></i></a>
+                    </figure>
 
-                b.HasKey("Id");
+                    <div class="portfolio-info">
+                        <h4><a href="portfolio-details.html">Example 3</a></h4>
 
+                    </div>
+                </div>
+            </div>
 
-                b.HasIndex("NormalizedName")
-                .IsUnique()
-                .HasName("RoleNameIndex")
-                .HasFilter("[NormalizedName] IS NOT NULL");
 
 
-                b.ToTable("AspNetRoles");
-                }​​​​​​​);
+        </div>
 
+    </div>
+</section><!-- End Portfolio Section -->
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="section-bg">
+    <div class="container" data-aos="fade-up">
 
-                modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>
-                    ", b =>
-                    {
-                    b.Property<int>
-                        ("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+        <div class="section-header">
+            <h3>Contact</h3>
 
+        </div>
 
-                        b.Property<string>
-                            ("ClaimType")
-                            .HasColumnType("nvarchar(max)");
+        <div class="row contact-info">
 
 
-                            b.Property<string>
-                                ("ClaimValue")
-                                .HasColumnType("nvarchar(max)");
 
+            <div class="col-md-6">
+                <div class="contact-phone">
+                    <i class="ion-ios-telephone-outline"></i>
+                    <h3>Phone Number</h3>
+                    <p><a href="tel:+962770636523">+962770636523</a></p>
+                </div>
+            </div>
 
-                                b.Property<string>
-                                    ("RoleId")
-                                    .IsRequired()
-                                    .HasColumnType("nvarchar(450)");
+            <div class="col-md-6">
+                <div class="contact-email">
+                    <i class="ion-ios-email-outline"></i>
+                    <h3>Email</h3>
+                    <p><a href="mailto:Ranyaharahsheh4@gmail.com">Ranyaharahsheh4@gmail.com</a></p>
+                </div>
+            </div>
 
+        </div>
 
-                                    b.HasKey("Id");
 
 
-                                    b.HasIndex("RoleId");
-
-
-                                    b.ToTable("AspNetRoleClaims");
-                                    }​​​​​​​);
-
-
-                                    modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>
-                                        ", b =>
-                                        {
-                                        b.Property<int>
-                                            ("Id")
-                                            .ValueGeneratedOnAdd()
-                                            .HasColumnType("int")
-                                            .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-
-                                            b.Property<string>
-                                                ("ClaimType")
-                                                .HasColumnType("nvarchar(max)");
-
-
-                                                b.Property<string>
-                                                    ("ClaimValue")
-                                                    .HasColumnType("nvarchar(max)");
-
-
-                                                    b.Property<string>
-                                                        ("UserId")
-                                                        .IsRequired()
-                                                        .HasColumnType("nvarchar(450)");
-
-
-                                                        b.HasKey("Id");
-
-
-                                                        b.HasIndex("UserId");
-
-
-                                                        b.ToTable("AspNetUserClaims");
-                                                        }​​​​​​​);
-
-
-                                                        modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>
-                                                            ", b =>
-                                                            {
-                                                            b.Property<string>
-                                                                ("LoginProvider")
-                                                                .HasColumnType("nvarchar(450)");
-
-
-                                                                b.Property<string>
-                                                                    ("ProviderKey")
-                                                                    .HasColumnType("nvarchar(450)");
-
-
-                                                                    b.Property<string>
-                                                                        ("ProviderDisplayName")
-                                                                        .HasColumnType("nvarchar(max)");
-
-
-                                                                        b.Property<string>
-                                                                            ("UserId")
-                                                                            .IsRequired()
-                                                                            .HasColumnType("nvarchar(450)");
-
-
-                                                                            b.HasKey("LoginProvider", "ProviderKey");
-
-
-                                                                            b.HasIndex("UserId");
-
-
-                                                                            b.ToTable("AspNetUserLogins");
-                                                                            }​​​​​​​);
-
-
-                                                                            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>
-                                                                                ", b =>
-                                                                                {
-                                                                                b.Property<string>
-                                                                                    ("UserId")
-                                                                                    .HasColumnType("nvarchar(450)");
-
-
-                                                                                    b.Property<string>
-                                                                                        ("RoleId")
-                                                                                        .HasColumnType("nvarchar(450)");
-
-
-                                                                                        b.HasKey("UserId", "RoleId");
-
-
-                                                                                        b.HasIndex("RoleId");
-
-
-                                                                                        b.ToTable("AspNetUserRoles");
-                                                                                        }​​​​​​​);
-
-
-                                                                                        modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>
-                                                                                            ", b =>
-                                                                                            {
-                                                                                            b.Property<string>
-                                                                                                ("UserId")
-                                                                                                .HasColumnType("nvarchar(450)");
-
-
-                                                                                                b.Property<string>
-                                                                                                    ("LoginProvider")
-                                                                                                    .HasColumnType("nvarchar(450)");
-
-
-                                                                                                    b.Property<string>
-                                                                                                        ("Name")
-                                                                                                        .HasColumnType("nvarchar(450)");
-
-
-                                                                                                        b.Property<string>
-                                                                                                            ("Value")
-                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                            b.HasKey("UserId", "LoginProvider", "Name");
-
-
-                                                                                                            b.ToTable("AspNetUserTokens");
-                                                                                                            }​​​​​​​);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                                            ​[17:28] Thabet.Ajweh
-
-                                                                                                            modelBuilder.Entity("Portfolio.Data.Degree", b =>
-                                                                                                            {
-                                                                                                            b.Property<int>
-                                                                                                                ("DegreeId")
-                                                                                                                .ValueGeneratedOnAdd()
-                                                                                                                .HasColumnType("int")
-                                                                                                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-
-                                                                                                                b.Property<string>
-                                                                                                                    ("DegreeName")
-                                                                                                                    .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                    b.HasKey("DegreeId");
-
-
-                                                                                                                    b.ToTable("Degrees");
-                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                    modelBuilder.Entity("Portfolio.Data.InterpersonalSkills", b =>
-                                                                                                                    {
-                                                                                                                    b.Property<int>
-                                                                                                                        ("InterpersonalSkillsId")
-                                                                                                                        .ValueGeneratedOnAdd()
-                                                                                                                        .HasColumnType("int")
-                                                                                                                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-
-                                                                                                                        b.Property<string>
-                                                                                                                            ("InterpersonalSkillName")
-                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                            b.HasKey("InterpersonalSkillsId");
-
-
-                                                                                                                            b.ToTable("InterpersonalSkills");
-                                                                                                                            }​​​​​​​);
-
-
-                                                                                                                            modelBuilder.Entity("Portfolio.Data.Project", b =>
-                                                                                                                            {
-                                                                                                                            b.Property<int>
-                                                                                                                                ("ProjectId")
-                                                                                                                                .ValueGeneratedOnAdd()
-                                                                                                                                .HasColumnType("int")
-                                                                                                                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-
-                                                                                                                                b.Property<string>
-                                                                                                                                    ("ProjectDescription")
-                                                                                                                                    .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                    b.Property<byte[]>
-                                                                                                                                        ("ProjectImage")
-                                                                                                                                        .HasColumnType("varbinary(max)");
-
-
-                                                                                                                                        b.Property<string>
-                                                                                                                                            ("ProjectName")
-                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                            b.Property<byte[]>
-                                                                                                                                                ("ProjectPDF")
-                                                                                                                                                .HasColumnType("varbinary(max)");
-
-
-                                                                                                                                                b.Property<string>
-                                                                                                                                                    ("UserId")
-                                                                                                                                                    .HasColumnType("nvarchar(450)");
-
-
-                                                                                                                                                    b.HasKey("ProjectId");
-
-
-                                                                                                                                                    b.HasIndex("UserId");
-
-
-                                                                                                                                                    b.ToTable("Projects");
-                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                    modelBuilder.Entity("Portfolio.Data.TechnicalSkills", b =>
-                                                                                                                                                    {
-                                                                                                                                                    b.Property<int>
-                                                                                                                                                        ("TechnicalSkillsId")
-                                                                                                                                                        .ValueGeneratedOnAdd()
-                                                                                                                                                        .HasColumnType("int")
-                                                                                                                                                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-
-                                                                                                                                                        b.Property<string>
-                                                                                                                                                            ("TechnicalSkillName")
-                                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                            b.HasKey("TechnicalSkillsId");
-
-
-                                                                                                                                                            b.ToTable("TechnicalSkills");
-                                                                                                                                                            }​​​​​​​);
-
-
-                                                                                                                                                            modelBuilder.Entity("Portfolio.Data.University", b =>
-                                                                                                                                                            {
-                                                                                                                                                            b.Property<int>
-                                                                                                                                                                ("UniversityId")
-                                                                                                                                                                .ValueGeneratedOnAdd()
-                                                                                                                                                                .HasColumnType("int")
-                                                                                                                                                                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-
-                                                                                                                                                                b.Property<string>
-                                                                                                                                                                    ("UniversityName")
-                                                                                                                                                                    .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                    b.HasKey("UniversityId");
-
-
-                                                                                                                                                                    b.ToTable("Universities");
-                                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                                    modelBuilder.Entity("Portfolio.Data.User", b =>
-                                                                                                                                                                    {
-                                                                                                                                                                    b.Property<string>
-                                                                                                                                                                        ("Id")
-                                                                                                                                                                        .HasColumnType("nvarchar(450)");
-
-
-                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                            ("About")
-                                                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                            b.Property<int>
-                                                                                                                                                                                ("AccessFailedCount")
-                                                                                                                                                                                .HasColumnType("int");
-
-
-                                                                                                                                                                                b.Property<string>
-                                                                                                                                                                                    ("Address")
-                                                                                                                                                                                    .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                    b.Property<byte[]>
-                                                                                                                                                                                        ("CV")
-                                                                                                                                                                                        .HasColumnType("varbinary(max)");
-
-
-                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                            ("ConcurrencyStamp")
-                                                                                                                                                                                            .IsConcurrencyToken()
-                                                                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                            b.Property<DateTime>
-                                                                                                                                                                                                ("DateOfBirth")
-                                                                                                                                                                                                .HasColumnType("datetime2");
-
-
-                                                                                                                                                                                                b.Property<string>
-                                                                                                                                                                                                    ("Email")
-                                                                                                                                                                                                    .HasColumnType("nvarchar(256)")
-                                                                                                                                                                                                    .HasMaxLength(256);
-
-
-                                                                                                                                                                                                    b.Property<bool>
-                                                                                                                                                                                                        ("EmailConfirmed")
-                                                                                                                                                                                                        .HasColumnType("bit");
-
-
-                                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                                            ("FBUrl")
-                                                                                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                ("FirstName")
-                                                                                                                                                                                                                .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                b.Property<bool>
-                                                                                                                                                                                                                    ("Gender")
-                                                                                                                                                                                                                    .HasColumnType("bit");
-
-
-                                                                                                                                                                                                                    b.Property<string>
-                                                                                                                                                                                                                        ("JobTitle")
-                                                                                                                                                                                                                        .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                                                            ("LastName")
-                                                                                                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                                ("LinkedInUrl")
-                                                                                                                                                                                                                                .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                b.Property<bool>
-                                                                                                                                                                                                                                    ("LockoutEnabled")
-                                                                                                                                                                                                                                    .HasColumnType("bit");
-
-
-                                                                                                                                                                                                                                    b.Property<DateTimeOffset?>
-                                                                                                                                                                                                                                        ("LockoutEnd")
-                                                                                                                                                                                                                                        .HasColumnType("datetimeoffset");
-
-
-                                                                                                                                                                                                                                        b.Property<long>
-                                                                                                                                                                                                                                            ("MobileNumber")
-                                                                                                                                                                                                                                            .HasColumnType("bigint");
-
-
-                                                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                                                ("NormalizedEmail")
-                                                                                                                                                                                                                                                .HasColumnType("nvarchar(256)")
-                                                                                                                                                                                                                                                .HasMaxLength(256);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                                                                                                                                                                                ​[17:30] Thabet.Ajweh
-
-                                                                                                                                                                                                                                                b.Property<string>
-                                                                                                                                                                                                                                                    ("NormalizedUserName")
-                                                                                                                                                                                                                                                    .HasColumnType("nvarchar(256)")
-                                                                                                                                                                                                                                                    .HasMaxLength(256);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                                                                                                                                                                                    b.Property<string>
-                                                                                                                                                                                                                                                        ("PasswordHash")
-                                                                                                                                                                                                                                                        .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                        b.Property<byte[]>
-                                                                                                                                                                                                                                                            ("PersonalImage")
-                                                                                                                                                                                                                                                            .HasColumnType("varbinary(max)");
-
-
-                                                                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                                                                ("PhoneNumber")
-                                                                                                                                                                                                                                                                .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                b.Property<bool>
-                                                                                                                                                                                                                                                                    ("PhoneNumberConfirmed")
-                                                                                                                                                                                                                                                                    .HasColumnType("bit");
-
-
-                                                                                                                                                                                                                                                                    b.Property<string>
-                                                                                                                                                                                                                                                                        ("PortfolioEmail")
-                                                                                                                                                                                                                                                                        .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                                                                                                            ("SecondName")
-                                                                                                                                                                                                                                                                            .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                                                                                ("SecurityStamp")
-                                                                                                                                                                                                                                                                                .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                                b.Property<string>
-                                                                                                                                                                                                                                                                                    ("TwitterUrl")
-                                                                                                                                                                                                                                                                                    .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                                    b.Property<bool>
-                                                                                                                                                                                                                                                                                        ("TwoFactorEnabled")
-                                                                                                                                                                                                                                                                                        .HasColumnType("bit");
-
-
-                                                                                                                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                                                                                                                            ("UserName")
-                                                                                                                                                                                                                                                                                            .HasColumnType("nvarchar(256)")
-                                                                                                                                                                                                                                                                                            .HasMaxLength(256);
-
-
-                                                                                                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                                                                                                ("Vision")
-                                                                                                                                                                                                                                                                                                .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                                                b.HasKey("Id");
-
-
-                                                                                                                                                                                                                                                                                                b.HasIndex("NormalizedEmail")
-                                                                                                                                                                                                                                                                                                .HasName("EmailIndex");
-
-
-                                                                                                                                                                                                                                                                                                b.HasIndex("NormalizedUserName")
-                                                                                                                                                                                                                                                                                                .IsUnique()
-                                                                                                                                                                                                                                                                                                .HasName("UserNameIndex")
-                                                                                                                                                                                                                                                                                                .HasFilter("[NormalizedUserName] IS NOT NULL");
-
-
-                                                                                                                                                                                                                                                                                                b.ToTable("AspNetUsers");
-                                                                                                                                                                                                                                                                                                }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                modelBuilder.Entity("Portfolio.Data.UserInterpersonalSkills", b =>
-                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                b.Property<string>
-                                                                                                                                                                                                                                                                                                    ("userId")
-                                                                                                                                                                                                                                                                                                    .HasColumnType("nvarchar(450)");
-
-
-                                                                                                                                                                                                                                                                                                    b.Property<int>
-                                                                                                                                                                                                                                                                                                        ("InterpersonalSkillsId")
-                                                                                                                                                                                                                                                                                                        .HasColumnType("int");
-
-
-                                                                                                                                                                                                                                                                                                        b.HasKey("userId", "InterpersonalSkillsId");
-
-
-                                                                                                                                                                                                                                                                                                        b.HasIndex("InterpersonalSkillsId");
-
-
-                                                                                                                                                                                                                                                                                                        b.ToTable("UserInterpersonalSkills");
-                                                                                                                                                                                                                                                                                                        }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                        modelBuilder.Entity("Portfolio.Data.UserTechnicalSkills", b =>
-                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                                                                                                                                            ("userId")
-                                                                                                                                                                                                                                                                                                            .HasColumnType("nvarchar(450)");
-
-
-                                                                                                                                                                                                                                                                                                            b.Property<int>
-                                                                                                                                                                                                                                                                                                                ("TechnicalSkillsId")
-                                                                                                                                                                                                                                                                                                                .HasColumnType("int");
-
-
-                                                                                                                                                                                                                                                                                                                b.HasKey("userId", "TechnicalSkillsId");
-
-
-                                                                                                                                                                                                                                                                                                                b.HasIndex("TechnicalSkillsId");
-
-
-                                                                                                                                                                                                                                                                                                                b.ToTable("UserTechnicalSkills");
-                                                                                                                                                                                                                                                                                                                }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                modelBuilder.Entity("Portfolio.Data.UserUniversity", b =>
-                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                b.Property<int>
-                                                                                                                                                                                                                                                                                                                    ("UniversityiId")
-                                                                                                                                                                                                                                                                                                                    .HasColumnType("int");
-
-
-                                                                                                                                                                                                                                                                                                                    b.Property<int>
-                                                                                                                                                                                                                                                                                                                        ("DegreeId")
-                                                                                                                                                                                                                                                                                                                        .HasColumnType("int");
-
-
-                                                                                                                                                                                                                                                                                                                        b.Property<string>
-                                                                                                                                                                                                                                                                                                                            ("UserId")
-                                                                                                                                                                                                                                                                                                                            .HasColumnType("nvarchar(450)");
-
-
-                                                                                                                                                                                                                                                                                                                            b.Property<string>
-                                                                                                                                                                                                                                                                                                                                ("MajorName")
-                                                                                                                                                                                                                                                                                                                                .HasColumnType("nvarchar(max)");
-
-
-                                                                                                                                                                                                                                                                                                                                b.HasKey("UniversityiId", "DegreeId", "UserId");
-
-
-                                                                                                                                                                                                                                                                                                                                b.HasIndex("DegreeId");
-
-
-                                                                                                                                                                                                                                                                                                                                b.HasIndex("UserId");
-
-
-                                                                                                                                                                                                                                                                                                                                b.ToTable("UserUniversitiess");
-                                                                                                                                                                                                                                                                                                                                }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>
-                                                                                                                                                                                                                                                                                                                                    ", b =>
-                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                                                                                                                                                                                                                                                                                                                                    .WithMany()
-                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("RoleId")
-                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-                                                                                                                                                                                                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                    modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>
-                                                                                                                                                                                                                                                                                                                                        ", b =>
-                                                                                                                                                                                                                                                                                                                                        {
-                                                                                                                                                                                                                                                                                                                                        b.HasOne("Portfolio.Data.User", null)
-                                                                                                                                                                                                                                                                                                                                        .WithMany()
-                                                                                                                                                                                                                                                                                                                                        .HasForeignKey("UserId")
-                                                                                                                                                                                                                                                                                                                                        .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                        .IsRequired();
-                                                                                                                                                                                                                                                                                                                                        }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                        modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>
-                                                                                                                                                                                                                                                                                                                                            ", b =>
-                                                                                                                                                                                                                                                                                                                                            {
-                                                                                                                                                                                                                                                                                                                                            b.HasOne("Portfolio.Data.User", null)
-                                                                                                                                                                                                                                                                                                                                            .WithMany()
-                                                                                                                                                                                                                                                                                                                                            .HasForeignKey("UserId")
-                                                                                                                                                                                                                                                                                                                                            .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                            .IsRequired();
-                                                                                                                                                                                                                                                                                                                                            }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>
-                                                                                                                                                                                                                                                                                                                                                ", b =>
-                                                                                                                                                                                                                                                                                                                                                {
-                                                                                                                                                                                                                                                                                                                                                b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
-                                                                                                                                                                                                                                                                                                                                                .WithMany()
-                                                                                                                                                                                                                                                                                                                                                .HasForeignKey("RoleId")
-                                                                                                                                                                                                                                                                                                                                                .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                .IsRequired();
-
-
-                                                                                                                                                                                                                                                                                                                                                b.HasOne("Portfolio.Data.User", null)
-                                                                                                                                                                                                                                                                                                                                                .WithMany()
-                                                                                                                                                                                                                                                                                                                                                .HasForeignKey("UserId")
-                                                                                                                                                                                                                                                                                                                                                .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                .IsRequired();
-                                                                                                                                                                                                                                                                                                                                                }​​​​​​​);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                                                                                                                                                                                                                                                                                                                                ​[17:30] Thabet.Ajweh
-
-                                                                                                                                                                                                                                                                                                                                                modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>
-                                                                                                                                                                                                                                                                                                                                                    ", b =>
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.User", null)
-                                                                                                                                                                                                                                                                                                                                                    .WithMany()
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("UserId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-                                                                                                                                                                                                                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                                    modelBuilder.Entity("Portfolio.Data.Project", b =>
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.User", "User")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("Projects")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("UserId");
-                                                                                                                                                                                                                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                                    modelBuilder.Entity("Portfolio.Data.UserInterpersonalSkills", b =>
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.InterpersonalSkills", "interpersonalSkills")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserInterpersonalSkills")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("InterpersonalSkillsId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-
-
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.User", "user")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserInterpersonalSkills")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("userId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-                                                                                                                                                                                                                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                                    modelBuilder.Entity("Portfolio.Data.UserTechnicalSkills", b =>
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.TechnicalSkills", "technicalSkills")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserTechnicalSkills")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("TechnicalSkillsId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-
-
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.User", "user")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserTechnicalSkills")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("userId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-                                                                                                                                                                                                                                                                                                                                                    }​​​​​​​);
-
-
-                                                                                                                                                                                                                                                                                                                                                    modelBuilder.Entity("Portfolio.Data.UserUniversity", b =>
-                                                                                                                                                                                                                                                                                                                                                    {
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.Degree", "Degree")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserUniversities")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("DegreeId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-
-
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.University", "University")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserUniversities")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("UniversityiId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-
-
-                                                                                                                                                                                                                                                                                                                                                    b.HasOne("Portfolio.Data.User", "User")
-                                                                                                                                                                                                                                                                                                                                                    .WithMany("UserUniversities")
-                                                                                                                                                                                                                                                                                                                                                    .HasForeignKey("UserId")
-                                                                                                                                                                                                                                                                                                                                                    .OnDelete(DeleteBehavior.Cascade)
-                                                                                                                                                                                                                                                                                                                                                    .IsRequired();
-                                                                                                                                                                                                                                                                                                                                                    }​​​​​​​);
-                                                                                                                                                                                                                                                                                                                                                    #pragma warning restore 612, 618
-                                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                                                                                                    }
-
-
-
-
-
-
-
-
-
-
-
+    </div>
+</section><!-- End Contact Section -->
+  </main><!-- End #main -->
