@@ -1,0 +1,35 @@
+﻿@using PortfolioProject.Data
+@model InterpersonalSkill
+@{
+    Layout = "~/Views/Shared/_AdminActionLayout.cshtml";
+
+}
+<div style=" background: -webkit-linear-gradient(-135deg, #18d26e, #fcfcfc,#18d26e); ">
+
+    <div class="main">
+
+        <div class="container">
+            <h2>Add New Interpersonal Skill</h2>
+            <form id="signup-form" class="signup-form" action="/Skill/CreateInterpersonalSkill">
+                <h3>
+                    Interpersonal Skill
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+
+
+
+                        <div class="form-input">
+                            <label>Enter Interpersonal Skill Name </label>
+                            <input type="text" name="InterpersonalSkillName" id="InterpersonalSkillName" placeholder="" />
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>

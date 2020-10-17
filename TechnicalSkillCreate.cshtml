@@ -1,0 +1,36 @@
+﻿@using PortfolioProject.Data
+@model TechnicalSkill
+
+@{
+    Layout = "~/Views/Shared/_AdminActionLayout.cshtml";
+
+}
+<div style=" background: -webkit-linear-gradient(-135deg, #18d26e, #fcfcfc,#18d26e); ">
+
+    <div class="main">
+
+        <div class="container">
+            <h2> Add New Technical Skill</h2>
+            <form id="signup-form" class="signup-form" action="/Skill/CreateTechnicalSkill">
+                <h3>
+                    TechnicalSkill
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+
+
+
+                        <div class="form-input">
+                            <label>Enter Technical Skill Name </label>
+                            <input type="text" name="TechnicalSkillName" id="TechnicalSkillName"  />
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>

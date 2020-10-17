@@ -1,0 +1,52 @@
+﻿@model InterpersonalSkill
+@using PortfolioProject.Data
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<section id="about">
+    <div class="container" data-aos="fade-up">
+
+        <header class="section-header">
+            <br />
+            <br />
+            <br />
+            <br />
+            <div class="container">
+                <table class="table table-striped ">
+                    <thead>
+                        <tr>
+                            <th>Skill Name</th>
+                            <th>Remove</th>
+                            <th>Edit</th>
+                            <th>
+                                @Html.ActionLink("Create", "InterpersonalSkillCreate", "Skill",
+                                new { @class = "btn btn-dark" })
+                            </th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            foreach (var x in (List<InterpersonalSkill>)ViewBag.InterpersonalSkills)
+                            {
+                                <tr>
+                                    <td>@x.InterpersonalSkillName</td>
+                                    <td>
+                                        @Html.ActionLink("Remove", "RemoveInterpersonalSkill", "Skill",
+                                       new { Id = x.InterpersonalSkillId }, new { @style = "background:#18d26e ", @class = "btn text-white " })
+                                    </td>
+                                    <td>
+                                        @Html.ActionLink("Edit", "EditInterpersonalSkill", "Skill",
+                                       new { interpersonalSkillId = x.InterpersonalSkillId }, new { @style = "background:#18d26e ", @class = "btn text-white " })
+                                    </td>
+                                </tr>
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </header>
+
+    </div>
+</section>

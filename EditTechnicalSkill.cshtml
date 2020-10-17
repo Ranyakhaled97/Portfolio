@@ -1,0 +1,36 @@
+﻿@using PortfolioProject.Data
+@model TechnicalSkill
+
+@{
+    Layout = "~/Views/Shared/_AdminActionLayout.cshtml";
+
+}
+<div style=" background: -webkit-linear-gradient(-135deg, #18d26e, #fcfcfc,#18d26e); ">
+
+    <div class="main">
+
+        <div class="container">
+            <h2> Edit Technical Skill</h2>
+            <form id="signup-form" class="signup-form" action="/Skill/EditTechnicalSkill" method="post">
+                <h3>
+                    TechnicalSkill
+                </h3>
+                <fieldset>
+                    <div class="form-row form-input-flex">
+
+
+                        @Html.HiddenFor(x=>x.TechnicalSkillId)
+                        <div class="form-input">
+                            <label>Add New Technical Skill Name </label>
+                            @Html.TextBoxFor(x=>x.TechnicalSkillName)
+                        </div>
+                    </div>
+
+
+
+                </fieldset>
+            </form>
+        </div>
+
+    </div>
+</div>
